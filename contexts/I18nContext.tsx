@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
-import ptTranslations from '/locales/pt.json' assert { type: 'json' };
-import enTranslations from '/locales/en.json' assert { type: 'json' };
+import { enTranslations, ptTranslations } from '../locales/translations';
 
 type Language = 'pt' | 'en';
 
@@ -11,8 +10,8 @@ interface I18nContextType {
 }
 
 const translations = {
-  pt: ptTranslations,
-  en: enTranslations,
+    pt: ptTranslations,
+    en: enTranslations,
 };
 
 // Function to get a nested property from an object using a dot-separated string
@@ -37,7 +36,7 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     localStorage.setItem('language', language);
     const langCode = language === 'pt' ? 'pt-BR' : 'en';
     document.documentElement.lang = langCode;
-    // Also update the title
+    
     if (language === 'pt') {
         document.title = 'Lucas Baccelli - Portfólio';
     } else {

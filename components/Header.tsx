@@ -40,6 +40,7 @@ const Header: React.FC = () => {
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
   const [isReady, setIsReady] = useState(false);
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const sections = navItems.map(item => document.getElementById(item.name)).filter(Boolean) as HTMLElement[];
@@ -100,6 +101,13 @@ const Header: React.FC = () => {
           width: activeLink.offsetWidth,
           opacity: 1,
         });
+
+        activeLink.scrollIntoView({
+            behavior: 'smooth',
+            inline: 'center',
+            block: 'nearest'
+        });
+
         if (!isReady) {
           setIsReady(true);
         }
@@ -121,7 +129,10 @@ const Header: React.FC = () => {
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full px-4">
        <div className="max-w-max mx-auto">
         <div className="bg-[#1A2332]/70 backdrop-blur-sm border border-gray-700/50 rounded-full px-2 py-1.5 flex items-center">
-          <nav className="relative flex items-center font-fira-code text-sm sm:text-base">
+          <nav 
+            ref={navRef}
+            className="relative flex items-center font-fira-code text-sm sm:text-base overflow-x-auto no-scrollbar"
+          >
             <span
               className={`absolute top-0 h-full bg-slate-700 rounded-full shadow-lg shadow-cyan-400/30 ${isReady ? 'transition-all duration-500 ease-in-out' : ''}`}
               style={indicatorStyle}
@@ -132,7 +143,7 @@ const Header: React.FC = () => {
                 href={item.href}
                 ref={el => { linkRefs.current[index] = el; }}
                 onClick={(e) => handleNavClick(e, item.href, item.name)}
-                className={`relative z-10 transition-colors duration-300 px-4 py-1.5 rounded-full cursor-pointer ${activeSection === item.name ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+                className={`relative z-10 transition-colors duration-300 px-4 py-1.5 rounded-full cursor-pointer whitespace-nowrap ${activeSection === item.name ? 'text-white' : 'text-gray-400 hover:text-white'}`}
               >
                 {t(item.key)}
               </a>
