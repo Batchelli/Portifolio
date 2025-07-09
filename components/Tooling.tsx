@@ -2,6 +2,7 @@ import React from 'react';
 import { TOOLS } from '../constants';
 import { Tool } from '../types';
 import SectionTitle from './SectionTitle';
+import { useI18n } from '../contexts/I18nContext';
 
 const ToolingCard: React.FC<{ tool: Tool }> = ({ tool }) => {
   const Icon = tool.icon;
@@ -14,10 +15,11 @@ const ToolingCard: React.FC<{ tool: Tool }> = ({ tool }) => {
 };
 
 const Tooling = (): React.ReactNode => {
+  const { t } = useI18n();
   return (
     <section className="py-24">
       <div className="text-center">
-        <SectionTitle>Tooling</SectionTitle>
+        <SectionTitle>{t('tooling.title')}</SectionTitle>
       </div>
       <div className="bg-[#1A2332]/70 p-8 rounded-2xl border border-gray-700/50">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">

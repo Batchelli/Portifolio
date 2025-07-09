@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -7,8 +6,10 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import ScrollAnimator from './components/ScrollAnimator';
+import { useI18n } from './contexts/I18nContext';
 
 function App(): React.ReactNode {
+  const { t } = useI18n();
   const [mousePosition, setMousePosition] = useState({ x: -1000, y: -1000 });
 
   useEffect(() => {
@@ -53,7 +54,7 @@ function App(): React.ReactNode {
           </ScrollAnimator>
         </main>
         <footer className="text-center py-8 text-gray-400 text-sm font-fira-code">
-          <p>Projetado e construído por Lucas Baccelli.</p>
+          <p>{t('footer.text')}</p>
         </footer>
       </div>
     </div>

@@ -6,20 +6,20 @@ export interface Tool {
 }
 
 export interface Project {
-  name: string;
-  description: string;
+  nameKey: string;
+  descriptionKey: string;
   imageUrl: string;
   tags: string[];
   url?: string;
 }
 
 export interface ExperienceItem {
-  role: string;
+  roleKey: string;
   company: string;
   period: string;
   location: string;
   companyUrl: string;
-  description: string;
+  descriptionKey: string;
   companyLogoUrl: string;
 }
 

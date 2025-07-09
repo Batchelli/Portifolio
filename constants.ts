@@ -15,42 +15,42 @@ export const TOOLS: Tool[] = [
 
 export const PROJECTS: Project[] = [
     { 
-    name: 'Dashboard de Análise', 
-    description: 'Uma aplicação web interativa para visualização de dados com gráficos dinâmicos e filtros customizáveis.', 
+    nameKey: 'projects.dashboard.name', 
+    descriptionKey: 'projects.dashboard.description', 
     imageUrl: 'https://i.imgur.com/G5OAEwF.png',
     url: '#',
     tags: ['React', 'Tailwind CSS', 'TypeScript', 'Chart.js']
   },
   { 
-    name: 'Loja Virtual de Roupas', 
-    description: 'Plataforma de e-commerce completa, com carrinho de compras, checkout e gerenciamento de produtos.', 
+    nameKey: 'projects.ecommerce.name', 
+    descriptionKey: 'projects.ecommerce.description',
     imageUrl: 'https://i.imgur.com/bE7p1N5.png',
     url: '#',
     tags: ['Angular', 'SCSS', 'TypeScript', 'Stripe API']
   },
   { 
-    name: 'App de Fitness', 
-    description: 'Aplicativo móvel multiplataforma para acompanhamento de treinos e progresso físico, com integração social.', 
+    nameKey: 'projects.fitnessApp.name', 
+    descriptionKey: 'projects.fitnessApp.description',
     imageUrl: 'https://i.imgur.com/yv6k1nS.png',
     url: '#',
     tags: ['Flutter', 'Dart', 'Firebase', 'Provider']
   },
   { 
-    name: 'Website Portfólio', 
-    description: 'O site que você está vendo agora, construído para ser rápido, responsivo e visualmente agradável.', 
+    nameKey: 'projects.portfolio.name',
+    descriptionKey: 'projects.portfolio.description',
     imageUrl: 'https://i.imgur.com/mJ9r5T8.png',
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite']
   },
   { 
-    name: 'API de Gerenciamento', 
-    description: 'API RESTful para um sistema de gerenciamento de tarefas, com autenticação JWT e documentação Swagger.', 
+    nameKey: 'projects.api.name', 
+    descriptionKey: 'projects.api.description',
     imageUrl: 'https://i.imgur.com/6XlQ7xw.png',
     url: '#',
     tags: ['Python', 'FastAPI', 'PostgreSQL', 'Docker']
   },
   { 
-    name: 'Estudo de UX para App', 
-    description: 'Pesquisa de usuário, design de interface e prototipagem para um novo aplicativo de viagens, focado na usabilidade.', 
+    nameKey: 'projects.uxStudy.name', 
+    descriptionKey: 'projects.uxStudy.description',
     imageUrl: 'https://i.imgur.com/pZ8vKAd.png',
     url: '#',
     tags: ['Figma', 'User Research', 'Prototyping']
@@ -59,30 +59,30 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    role: 'Jovem Aprendiz de Soluções Digitais',
+    roleKey: 'experience.bosch_apprentice.role',
     company: 'Robert Bosch',
     period: '2023 - 2024',
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
-    description: 'Atuei como Jovem Aprendiz em Soluções Digitais na Robert Bosch por um ano e meio. Durante este período, trabalhei em tempo integral, dedicando metade do tempo a projetos internos na empresa e a outra metade à formação técnica em Desenvolvimento de Sistemas na Escola Técnica SENAI.',
+    descriptionKey: 'experience.bosch_apprentice.description',
     companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
   },
   {
-    role: 'Estagiário de Soluções Digitais',
+    roleKey: 'experience.bosch_intern.role',
     company: 'Robert Bosch',
     period: '2024 - 2025',
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
-    description: 'Como estagiário, expandi minhas responsabilidades no desenvolvimento de soluções digitais, colaborando em projetos de maior escala e aprofundando meus conhecimentos em tecnologias web modernas e metodologias ágeis.',
+    descriptionKey: 'experience.bosch_intern.description',
     companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
   },
   {
-    role: 'Automação HRS',
+    roleKey: 'experience.bosch_automation.role',
     company: 'Robert Bosch',
-    period: '2025 - Presente',
+    period: '2025 - Present',
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
-    description: 'Focado na automação de processos para a área de Recursos Humanos (HRS), desenvolvendo e implementando soluções para otimizar fluxos de trabalho, melhorar a eficiência e garantir a integridade dos dados.',
+    descriptionKey: 'experience.bosch_automation.description',
     companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
   }
 ];

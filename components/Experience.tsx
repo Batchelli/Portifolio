@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { EXPERIENCES } from '../constants';
 import { ExperienceItem } from '../types';
 import SectionTitle from './SectionTitle';
 import { FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { useI18n } from '../contexts/I18nContext';
 
 interface ExperienceCardProps {
   item: ExperienceItem;
@@ -13,6 +13,7 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ item, isOpen, onToggle, id }) => {
+  const { t } = useI18n();
   return (
     <div className="bg-[#1A2332] rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300">
       <button
@@ -22,7 +23,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ item, isOpen, onToggle,
         aria-controls={id}
       >
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-white">{`${item.role} - ${item.company}`}</h3>
+          <h3 className="text-lg font-bold text-white">{`${t(item.roleKey)} - ${item.company}`}</h3>
         </div>
         <div className="text-gray-400 font-fira-code mr-4 hidden sm:block">{item.period}</div>
         <div className={`text-slate-200 text-2xl font-light transform transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
@@ -55,7 +56,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ item, isOpen, onToggle,
                     <span>{item.companyUrl.replace('https://www.', '')}</span>
                   </a>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{item.description}</p>
+                <p className="text-gray-300 leading-relaxed">{t(item.descriptionKey)}</p>
               </div>
               <div className="flex-shrink-0 w-full md:w-48 flex items-center justify-center p-4 bg-white/5 rounded-lg">
                 <img src={item.companyLogoUrl} alt={`${item.company} logo`} className="max-h-12 w-auto" loading="lazy" />
@@ -70,6 +71,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ item, isOpen, onToggle,
 
 
 const Experience = (): React.ReactNode => {
+  const { t } = useI18n();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const handleToggle = (index: number) => {
@@ -79,7 +81,7 @@ const Experience = (): React.ReactNode => {
   return (
     <section className="py-16">
       <div className="text-center">
-        <SectionTitle>Experiência Profissional</SectionTitle>
+        <SectionTitle>{t('experience.title')}</SectionTitle>
       </div>
       <div>
         {EXPERIENCES.map((exp, index) => (

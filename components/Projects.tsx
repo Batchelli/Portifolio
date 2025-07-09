@@ -1,31 +1,33 @@
-
 import React from 'react';
 import { PROJECTS } from '../constants';
 import { Project } from '../types';
 import SectionTitle from './SectionTitle';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { useI18n } from '../contexts/I18nContext';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const { t } = useI18n();
   const hasLink = project.url && project.url !== '#';
-
+  const projectName = t(project.nameKey);
+  
   const content = (
     <>
       <div className="overflow-hidden">
         <img
           src={project.imageUrl}
-          alt={project.name}
+          alt={projectName}
           loading="lazy"
           className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-white flex items-center justify-between">
-          <span>{project.name}</span>
+          <span>{projectName}</span>
           {hasLink && (
             <FaExternalLinkAlt className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors ml-2" />
           )}
         </h3>
-        <p className="text-gray-400 mt-2 flex-grow">{project.description}</p>
+        <p className="text-gray-400 mt-2 flex-grow">{t(project.descriptionKey)}</p>
         <div className="mt-4 flex flex-wrap gap-2" aria-label="Tecnologias utilizadas">
           {project.tags.map((tag) => (
             <span key={tag} className="bg-cyan-900/50 text-cyan-300 text-xs font-medium px-2.5 py-1 rounded-full font-fira-code">
@@ -38,10 +40,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   );
 
   const cardClasses = "bg-[#1A2332] rounded-2xl overflow-hidden group flex flex-col transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-400/20 shadow-md border-b-2 border-transparent hover:border-cyan-400";
+  const ariaLabel = t('aria.viewProjectDetails', { projectName: projectName });
 
   if (hasLink) {
     return (
-      <a href={project.url} target="_blank" rel="noopener noreferrer" className={cardClasses} aria-label={`Ver detalhes do projeto ${project.name}`}>
+      <a href={project.url} target="_blank" rel="noopener noreferrer" className={cardClasses} aria-label={ariaLabel}>
         {content}
       </a>
     );
@@ -51,10 +54,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 };
 
 const Projects = (): React.ReactNode => {
+  const { t } = useI18n();
   return (
     <section className="py-16">
       <div className="text-center">
-        <SectionTitle>Projetos</SectionTitle>
+        <SectionTitle>{t('projects.title')}</SectionTitle>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROJECTS.map((project, index) => (
