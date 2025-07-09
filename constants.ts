@@ -59,13 +59,13 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
-    roleKey: 'experience.bosch_apprentice.role',
+    roleKey: 'experience.bosch_automation.role',
     company: 'Robert Bosch',
-    period: '2023 - 2024',
+    period: '2025 - Present',
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
-    descriptionKey: 'experience.bosch_apprentice.description',
-    companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
+    descriptionKey: 'experience.bosch_automation.description',
+    companyLogoUrl: 'https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzE5N1wvYXNzZXRzXC84MlwvMjE3MjcwXC84NjA5MzQ5MzBlNmIwN2RlNzU5OTBhZTU3N2FjMmUzZi0xNjM5NjQwMDMxLnN2ZyJ9:bosch:RKAylQVllRnycwEizvNT_tECtjgND-8u9FpBYmMOIPU?width=2400'
   },
   {
     roleKey: 'experience.bosch_intern.role',
@@ -74,17 +74,17 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
     descriptionKey: 'experience.bosch_intern.description',
-    companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
+    companyLogoUrl: 'https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzE5N1wvYXNzZXRzXC84MlwvMjE3MjcwXC84NjA5MzQ5MzBlNmIwN2RlNzU5OTBhZTU3N2FjMmUzZi0xNjM5NjQwMDMxLnN2ZyJ9:bosch:RKAylQVllRnycwEizvNT_tECtjgND-8u9FpBYmMOIPU?width=2400'
   },
   {
-    roleKey: 'experience.bosch_automation.role',
+    roleKey: 'experience.bosch_apprentice.role',
     company: 'Robert Bosch',
-    period: '2025 - Present',
+    period: '2023 - 2024',
     location: 'São Paulo, Brasil',
     companyUrl: 'https://www.bosch.com.br/',
-    descriptionKey: 'experience.bosch_automation.description',
-    companyLogoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Bosch-logo.svg/2560px-Bosch-logo.svg.png'
-  }
+    descriptionKey: 'experience.bosch_apprentice.description',
+    companyLogoUrl: 'https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYm9zY2hcL2FjY291bnRzXC9hNVwvNDAwMDA5OFwvcHJvamVjdHNcLzE5N1wvYXNzZXRzXC84MlwvMjE3MjcwXC84NjA5MzQ5MzBlNmIwN2RlNzU5OTBhZTU3N2FjMmUzZi0xNjM5NjQwMDMxLnN2ZyJ9:bosch:RKAylQVllRnycwEizvNT_tECtjgND-8u9FpBYmMOIPU?width=2400'
+  },
 ];
 
 export const CONTACT_INFO: ContactInfo = {
@@ -95,5 +95,5 @@ export const CONTACT_INFO: ContactInfo = {
 export const SOCIAL_MEDIA: SocialMedia[] = [
   { name: 'Github', username: 'github.com/Batchelli', url: 'https://github.com/Batchelli', icon: FaGithub },
   { name: 'LinkedIn', username: 'linkedin.com/in/baccelli-lucas', url: 'https://www.linkedin.com/in/baccelli-lucas/', icon: FaLinkedin },
-  { name: 'Instagram', username: 'instagram.com/dev.baccelli', url: 'https://www.instagram.com/dev.baccelli/', icon: FaInstagram }
+  { name: 'Instagram', username: 'instagram.com/Batchielli', url: 'https://www.instagram.com/Batchielli/', icon: FaInstagram }
 ];
