@@ -34,9 +34,7 @@ TypeScript: Para adicionar tipagem estática e segurança ao código.
 
 Vite: Ferramenta de build extremamente rápida para desenvolvimento front-end.
 
-CSS/Sass: Para estilização dos componentes. (Adapte se usar outra tecnologia como Styled Components ou Material-UI)
-
-GitHub Pages: Para o deploy e hospedagem do site.
+Tailwind: Para estilização dos componentes. 
 
 # 📞 Contato
 Gostou do que viu? Vamos nos conectar!
