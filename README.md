@@ -3,7 +3,7 @@
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor(a).
 
 # Acesse a versão online do portfólio aqui!
-[🔗 lucasbaccelli.vercel.app](lucasbaccelli.vercel.app)
+🔗 [lucasbaccelli.vercel.app](https://lucasbaccelli.vercel.app/)
 
 # 📜 Sobre o Projeto
 Este é um portfólio dinâmico e interativo, criado para ser uma central de informações sobre minha carreira e meus trabalhos. Aqui você encontrará:
@@ -41,6 +41,6 @@ GitHub Pages: Para o deploy e hospedagem do site.
 # 📞 Contato
 Gostou do que viu? Vamos nos conectar!
 
-LinkedIn: [🔗 https://www.linkedin.com/in/baccelli-lucas/](https://www.linkedin.com/in/baccelli-lucas/)
+LinkedIn: 🔗 [https://www.linkedin.com/in/baccelli-lucas/](https://www.linkedin.com/in/baccelli-lucas/)
 
 Email: ✉️ lbaccelli.2004@gmail.com
