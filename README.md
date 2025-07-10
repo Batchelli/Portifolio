@@ -2,8 +2,12 @@
 
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minhas habilidades, projetos e minha jornada como desenvolvedor(a).
 
+#
+
 # Acesse a versão online do portfólio aqui!
 🔗 [lucasbaccelli.vercel.app](https://lucasbaccelli.vercel.app/)
+
+#
 
 # 📜 Sobre o Projeto
 Este é um portfólio dinâmico e interativo, criado para ser uma central de informações sobre minha carreira e meus trabalhos. Aqui você encontrará:
@@ -16,6 +20,8 @@ Minhas informações de contato para networking e oportunidades.
 
 O objetivo principal é demonstrar minhas habilidades em desenvolvimento front-end utilizando tecnologias modernas e criar uma experiência de usuário agradável e fluida.
 
+#
+
 # ✨ Features
 Design Responsivo: Totalmente adaptável para visualização em desktops, tablets e celulares.
 
@@ -24,6 +30,8 @@ Componentização: Construído com componentes reutilizáveis, seguindo as melho
 Performance: Otimizado para um carregamento rápido com o Vite.
 
 Tipagem Estática: Código mais robusto e seguro com TypeScript.
+
+#
 
 # 🚀 Tecnologias Utilizadas
 Este projeto foi construído com as seguintes tecnologias:
@@ -35,6 +43,8 @@ TypeScript: Para adicionar tipagem estática e segurança ao código.
 Vite: Ferramenta de build extremamente rápida para desenvolvimento front-end.
 
 Tailwind: Para estilização dos componentes. 
+
+#
 
 # 📞 Contato
 Gostou do que viu? Vamos nos conectar!
